@@ -44,9 +44,9 @@ function getverbTense() {
 function getHour() {
      const hour = parseInt(getTime()[0])
 
-     if(hour > 12){
+     if (hour > 12) {
           return hour - 12
-     }else {
+     } else {
           return hour
      }
 }
@@ -57,7 +57,7 @@ function convertNumToWords(num) {
           return unitWords[num]
      } else {
           let tense = numString.split('')
-          return `iri${num < 20 ? '' :  ' ' + unitWords[tense[0]]} ${tense[1] == 0 ? '' : 'na'} ${unitWords[tense[1]]}`
+          return `iri${num < 20 ? '' : ' ' + unitWords[tense[0]]} ${tense[1] == 0 ? '' : 'na'} ${unitWords[tense[1]]}`
      }
 }
 
@@ -65,6 +65,57 @@ setInterval(() => {
      showTime()
 }, 1000);
 
+var ctx = (id) => document.getElementById(id).getContext('2d');
+
+var deliveredData = (color) => {
+     return {
+          labels: [
+               "Value"
+          ],
+          datasets: [
+               {
+                    data: [100, 25],
+                    backgroundColor: [
+                         color,
+                         "rgba(255,255,255,0.1)"
+                    ],
+                    hoverBackgroundColor: [
+                         "#3ec556",
+                         "rgba(0,0,0,0)"
+                    ],
+                    borderWidth: [
+                         0, 0
+                    ]
+               }
+          ]
+     }
+}
+
+var deliveredOpt = {
+     cutoutPercentage: 88,
+     animation: {
+          animationRotate: true,
+          duration: 2000
+     },
+     legend: {
+          display: false
+     },
+     tooltips: {
+          enabled: false
+     }
+};
+
+var chart = new Chart(ctx("event-doughnut"), {
+     type: 'doughnut',
+     data: deliveredData("#3ec556"),
+     options: deliveredOpt
+});
+
+var chart = new Chart(ctx("todo-doughnut"), {
+     type: 'doughnut',
+     data: deliveredData("#d34431"),
+     options: deliveredOpt
+});
 
 
 // console.log(new Date().toDateString())

@@ -7,9 +7,10 @@
 
 body{
      position: relative;
-     background: url('bg.jpg');
+     background: url('bg.jpg') no-repeat;
      background-size: cover;
      /* background: #626262; */
+     /* overflow: hidden; */
 }
 
 body::after{
@@ -29,6 +30,7 @@ body::after{
 .main-wrapper{
      width: 100%;
      margin: 0px auto;
+     margin-top: 100px;
      box-sizing: border-box;
      display: flex;
 }
@@ -37,6 +39,7 @@ body::after{
      display: flex;
      flex-direction: column;
      box-sizing: border-box;
+     padding: 50px;
      width: 50%;
 }
 
@@ -45,29 +48,31 @@ body::after{
  =======================================================*/
 
 .main-l{
-     align-content: center;
-     padding: 50px;
+     align-items: center;
 }
 
 .main-l input {
-     width: 90%;
+     display: block;
+     width: 80%;
      padding: 20px 40px;
      border-radius: 50px;
-     margin-bottom: 20px;
+     margin-bottom: 30px;
      font-size: 24px;
+     box-sizing: border-box;
+     box-shadow: 0 0  15px rgba(0, 0, 0, 0.8);
 }
 
 .main-l h1{
-     font-size: 120px;
+     font-size: 100px;
      color: #ffffff;
      text-align: center;
 }
 
 .main-l p{
      color: #ffffff;
-     margin-top: 100px;
+     margin-top: 60px;
      text-align: center;
-     font-size: 40px;
+     font-size: 34px;
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -76,7 +81,25 @@ Right- main section
 =======================================================*/
 
 .main-r h1{
-     font-size: 80px;
+     font-size: 70px;
+     margin-bottom: 30px;
      color: #ffffff;
      text-align: center;
+}
+
+
+.doughnut-chart-container{
+     display: flex;
+}
+
+.doughnut-chart-container > div{
+     width: 50%;
+     margin-bottom: 20px;
+}
+
+.doughnut-chart-container > div h3{
+     font-size: 22px;
+     color: #ffffff;
+     text-align: center;
+     margin-top: 20px;
 }
