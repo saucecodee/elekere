@@ -5,16 +5,11 @@
      font-family: monospace;
 }
 
-h1{
-     font-size: 100px;
-     color: #ffffff;
-     text-align: center;
-}
-
 body{
      position: relative;
      background: url('bg.jpg');
      background-size: cover;
+     /* background: #626262; */
 }
 
 body::after{
@@ -27,39 +22,61 @@ body::after{
      z-index: -1;
 }
 
+/*=======================================================
+     Main section 
+ =======================================================*/
+
 .main-wrapper{
      width: 100%;
      margin: 0px auto;
-     margin-top: 100px;
      box-sizing: border-box;
      display: flex;
 }
 
 .main-wrapper > div {
+     display: flex;
+     flex-direction: column;
      box-sizing: border-box;
      width: 50%;
 }
 
+/*=======================================================
+     Left- main section 
+ =======================================================*/
+
 .main-l{
-     display: flex;
-     flex-direction: column;
      align-content: center;
      padding: 50px;
 }
 
 .main-l input {
      width: 90%;
-     padding: 20px;
+     padding: 20px 40px;
      border-radius: 50px;
      margin-bottom: 20px;
      font-size: 24px;
 }
 
+.main-l h1{
+     font-size: 120px;
+     color: #ffffff;
+     text-align: center;
+}
 
-p{
+.main-l p{
      color: #ffffff;
      margin-top: 100px;
      text-align: center;
      font-size: 40px;
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*=======================================================
+Right- main section 
+=======================================================*/
+
+.main-r h1{
+     font-size: 80px;
+     color: #ffffff;
+     text-align: center;
 }
