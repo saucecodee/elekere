@@ -28,12 +28,31 @@ body::after{
 }
 
 .main-wrapper{
-     width: 1000px;
+     width: 100%;
      margin: 0px auto;
      margin-top: 100px;
-     padding: 50px;
      box-sizing: border-box;
      display: flex;
+}
+
+.main-wrapper > div {
+     box-sizing: border-box;
+     width: 50%;
+}
+
+.main-l{
+     display: flex;
+     flex-direction: column;
+     align-content: center;
+     padding: 50px;
+}
+
+.main-l input {
+     width: 90%;
+     padding: 20px;
+     border-radius: 50px;
+     margin-bottom: 20px;
+     font-size: 24px;
 }
 
 
