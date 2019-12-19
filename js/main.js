@@ -1,4 +1,4 @@
-const unitWords = ["", "otu", "abuo", "ato", "ano", "ise", "isi", "asa", "asato", "itolu"]
+const unitWords = ["", "otu", "abụọ", "atọ", "anọ", "ise", "isii", "asaa", "asatọ", "itoolu"]
 
 function showTime() {
      let tense = getverbTense().tense;
@@ -18,11 +18,11 @@ function getPeriod() {
      let hour = parseInt(getTime()[0])
 
      if (hour >= 0 && hour < 12) {
-          return "ututu"
+          return "ụtụtụ"
      } else if (hour >= 12 && hour < 16) {
           return "ehihe"
      } else {
-          return "abali"
+          return "abalị"
      }
 }
 
@@ -33,9 +33,9 @@ function getverbTense() {
      if (min > 0 && min < 30) {
           return { tense: "jirila", verb: "gafee", minute: min, hour: hour }
      } else if (min > 30 && min < 60) {
-          return { tense: "foduru", verb: "na-aga", minute: 60 - min, hour: hour + 1 }
+          return { tense: "fọdụrụ", verb: "na-aga", minute: 60 - min, hour: hour + 1 }
      } else if (min == 0) {
-          return { tense: "kuola", verb: " ", minute: " ", hour: hour }
+          return { tense: "kụọla", verb: " ", minute: " ", hour: hour }
      } else {
           return "loadin"
      }

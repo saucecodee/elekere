@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "My Extension",
+  "version": "1.0.0",
+  "description": "For the culture",
+  "author": "Onyegbu Ifedili",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
