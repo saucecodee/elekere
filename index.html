@@ -10,27 +10,74 @@
 </head>
 
 <body>
-     <header style="color:white"> .</header>
+     <div class="side-modal">
+          <div class="sm-header">
+               <h1>Title</h1>
+               <button id="sm-close-btn">X</button>
+          </div>
+     </div>
+
+
      <main>
           <h1 class="greet">Good morning, Ifedili</h1>
           <input class="search-bar" type="text" placeholder="Search something..">
           <div class="main-wrapper">
                <div class="main-l">
-                    <h1 id="time"></h1>
+                    <h1 id="time">00:00:00</h1>
                     <p id="elekere"></p>
                </div>
                <div class="main-r">
-                    <!-- <h1>Today</h1>x -->
-                    <div class="doughnut-chart-container">
-                         <div>
-                              <canvas id="event-doughnut" height="120"></canvas>
-                              <h3>7 Events</h3>
+                    <div>TODO</div>
+
+                    <section class="tabs-sec">
+                         <div class="sec-input-cont">
+                              <input type="text" placeholder="Type something...">
+                              <button>ADD</button>
                          </div>
-                         <div>
-                              <canvas id="todo-doughnut" height="120"></canvas>
-                              <h3>9 Todos</h3>
-                         </div>
-                    </div>
+                         <ul>
+                              <li class="sect-unit">
+                                   <input type="checkbox" style="margin-right: 10px;">
+                                   <div style="overflow: hidden; height: 30px; white-space: nowrap; text-overflow: ellipsis;">Th e manin fdiugfiudgu tiugeuigriegerguirgreiugrguugrguireg</div>
+                                   <div style="display: flex; margin-left: auto;">
+                                        <span><img src="./img/pencil-edit-button.svg" alt=""></span>
+                                        <span><img src="./img/rubbish-bin.svg" alt=""></span>
+                                   </div>
+                              </li>
+                              <li class="sect-unit">
+                                   <input type="checkbox" style="margin-right: 10px;">
+                                   <div style="overflow: hidden; height: 30px; white-space: nowrap; text-overflow: ellipsis;">Th e manin fdiugfiudgu tiugeuigriegerguirgreiugrguugrguireg</div>
+                                   <div style="display: flex; margin-left: auto;">
+                                        <span><img src="./img/pencil-edit-button.svg" alt=""></span>
+                                        <span><img src="./img/rubbish-bin.svg" alt=""></span>
+                                   </div>
+                              </li>
+                              <li class="sect-unit">
+                                   <input type="checkbox" style="margin-right: 10px;">
+                                   <div style="overflow: hidden; height: 30px; white-space: nowrap; text-overflow: ellipsis;">Th e manin fdiugfiudgu tiugeuigriegerguirgreiugrguugrguireg</div>
+                                   <div style="display: flex; margin-left: auto;">
+                                        <span><img src="./img/pencil-edit-button.svg" alt=""></span>
+                                        <span><img src="./img/rubbish-bin.svg" alt=""></span>
+                                   </div>
+                              </li>
+                              <li class="sect-unit">
+                                   <input type="checkbox" style="margin-right: 10px;">
+                                   <div style="overflow: hidden; height: 30px; white-space: nowrap; text-overflow: ellipsis;">Th e manin fdiugfiudgu tiugeuigriegerguirgreiugrguugrguireg</div>
+                                   <div style="display: flex; margin-left: auto;">
+                                        <span><img src="./img/pencil-edit-button.svg" alt=""></span>
+                                        <span><img src="./img/rubbish-bin.svg" alt=""></span>
+                                   </div>
+                              </li>
+                              <li class="sect-unit">
+                                   <input type="checkbox" style="margin-right: 10px;">
+                                   <div style="overflow: hidden; height: 30px; white-space: nowrap; text-overflow: ellipsis;">Th e manin fdiugfiudgu tiugeuigriegerguirgreiugrguugrguireg</div>
+                                   <div style="display: flex; margin-left: auto;">
+                                        <span><img src="./img/pencil-edit-button.svg" alt=""></span>
+                                        <span><img src="./img/rubbish-bin.svg" alt=""></span>
+                                   </div>
+                              </li>
+                         </ul>
+                         <button>See more</button>
+                    </section>
                </div>
           </div>
      </main>

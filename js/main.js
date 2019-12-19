@@ -1,3 +1,4 @@
+const S = (selector) => document.querySelector(selector)
 const unitWords = ["", "otu", "abụọ", "atọ", "anọ", "ise", "isii", "asaa", "asatọ", "itoolu"]
 
 function showTime() {
@@ -6,8 +7,8 @@ function showTime() {
      let verb = getverbTense().verb;
      let hour = getverbTense().hour;
      let period = getPeriod();
-     document.querySelector('#time').innerHTML = new Date().toLocaleTimeString()
-     document.querySelector('#elekere').innerHTML = `O ${tense} nkeji ${convertNumToWords(minute)} ${verb} elekere ${convertNumToWords(hour)} nke ${period}`
+     S('#time').innerHTML = new Date().toLocaleTimeString()
+     S('#elekere').innerHTML = `O ${tense} nkeji ${convertNumToWords(minute)} ${verb} elekere ${convertNumToWords(hour)} nke ${period}`
 }
 
 function getTime() {
@@ -65,57 +66,12 @@ setInterval(() => {
      showTime()
 }, 1000);
 
-var ctx = (id) => document.getElementById(id).getContext('2d');
-
-var deliveredData = (color) => {
-     return {
-          labels: [
-               "Value"
-          ],
-          datasets: [
-               {
-                    data: [100, 25],
-                    backgroundColor: [
-                         color,
-                         "rgba(255,255,255,0.1)"
-                    ],
-                    hoverBackgroundColor: [
-                         "#3ec556",
-                         "rgba(0,0,0,0)"
-                    ],
-                    borderWidth: [
-                         0, 0
-                    ]
-               }
-          ]
-     }
-}
-
-var deliveredOpt = {
-     cutoutPercentage: 88,
-     animation: {
-          animationRotate: true,
-          duration: 2000
-     },
-     legend: {
-          display: false
-     },
-     tooltips: {
-          enabled: false
-     }
-};
-
-var chart = new Chart(ctx("event-doughnut"), {
-     type: 'doughnut',
-     data: deliveredData("#3ec556"),
-     options: deliveredOpt
+document.addEventListener("click", function () {
+     S('.side-modal').classList.add("side-modal-out")
 });
-
-var chart = new Chart(ctx("todo-doughnut"), {
-     type: 'doughnut',
-     data: deliveredData("#d34431"),
-     options: deliveredOpt
-});
+// S('#sm-close-btn').addEventListener("click", function () {
+//      S('.side-modal').classList.add("side-modal-out")
+// });
 
 
 // console.log(new Date().toDateString())
