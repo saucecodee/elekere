@@ -77,6 +77,7 @@ a{
      margin: 0px auto;
      box-sizing: border-box;
      display: flex;
+     align-items: center;
 }
 
 .main-wrapper > div {
@@ -91,6 +92,7 @@ a{
      color: #ffffff;
      text-align: center;
      margin-top: 100px;
+     margin-bottom: 100px;
 }
 
 .search-bar {
@@ -124,6 +126,12 @@ a{
      margin-top: 30px;
      text-align: center;
      font-size: 24px;
+}
+
+#date{
+     color: #ffffff;
+     font-size: 24px;
+     margin-bottom: 20px;
 }
 
 /*=======================================================
@@ -176,7 +184,7 @@ a{
 }
 
 .sect-unit span {
-     background: rgba(255, 255, 255, 0.1);
+     background: rgba(255, 255, 255, 0.9);
      margin: 0 5px;
      padding: 7px;
      border-radius: 20px;
@@ -190,4 +198,11 @@ a{
 .sect-unit span img{
      display: block;
      width: 15px;
+}
+
+.sect-cont-more-btn{
+     display: block;
+     margin: 10px auto 0;
+     padding: 10px 20px;
+     border-radius: 50px;
 }

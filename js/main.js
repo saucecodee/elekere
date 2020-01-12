@@ -8,6 +8,7 @@ function showTime() {
      let hour = getverbTense().hour;
      let period = getPeriod();
      S('#time').innerHTML = new Date().toLocaleTimeString()
+     S('#date').innerHTML = new Date().toDateString()
      S('#elekere').innerHTML = `O ${tense} nkeji ${convertNumToWords(minute)} ${verb} elekere ${convertNumToWords(hour)} nke ${period}`
 }
 
