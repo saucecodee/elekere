@@ -1,5 +1,21 @@
+// //////////////////////////////////////////////////////
+//      Global variable
+/////////////////////////////////////////////////////////
+
 const S = (selector) => document.querySelector(selector)
 const unitWords = ["", "otu", "abụọ", "atọ", "anọ", "ise", "isii", "asaa", "asatọ", "itoolu"]
+let notes = JSON.parse(localStorage.getItem("notes")) || []
+
+// //////////////////////////////////////////////////////
+//      Initial calls
+/////////////////////////////////////////////////////////
+
+showNotes()
+
+
+// //////////////////////////////////////////////////////
+//      Time
+/////////////////////////////////////////////////////////
 
 function showTime() {
      let tense = getverbTense().tense;
@@ -63,6 +79,7 @@ function convertNumToWords(num) {
      }
 }
 
+// Show the time
 setInterval(() => {
      showTime()
 }, 1000);
@@ -74,6 +91,61 @@ document.addEventListener("click", function () {
 //      S('.side-modal').classList.add("side-modal-out")
 // });
 
+// //////////////////////////////////////////////////////
+//      Todo
+/////////////////////////////////////////////////////////
+
+function getNote(id) {
+
+}
+
+function addNote() {
+     let note = S("#note-text").value
+     notes.push({ id: new Date().toJSON(), text: note })
+     
+     storeNote()
+     showNotes()
+     S("#note-text").value = ''
+}
+
+function editNote(id) {
+     let note = S("#note-text").value
+     let index = notes.findIndex(n => n.id == id)
+     notes[index].text = note
+     
+     storeNote()
+}
+
+function deleteNote(id) {
+     console.log(id)
+
+     let index = notes.findIndex(n => n.id == id)
+     notes.splice(index, 1)
+
+     storeNote()
+     showNotes()
+}
+
+function showNotes() {
+     noteList = ""
+     disNum = notes.length > 5 ? 5 : notes.length
+
+     for (let i = disNum -1; i >= 0; i--) {
+          noteList +=`<li class="sect-unit">
+                    <div class="sect-unit-text"> ${notes[i].text} </div>
+                    <div class="sect-unit-butts">
+                         <span><img src="./img/pencil-edit-button.svg" alt=""></span>
+                         <span onclick="deleteNote('${notes[i].id}')"><img src="./img/rubbish-bin.svg" alt=""></span>
+                    </div>
+               </li>`
+     }
+
+     S("#notes").innerHTML = noteList
+}
+
+function storeNote() {
+     localStorage.setItem("notes", JSON.stringify(notes))
+}
 
 // console.log(new Date().toDateString())
 // console.log(new Date().toISOString())

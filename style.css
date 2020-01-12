@@ -1,208 +1,234 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 
-*{
-     margin: 0;
-     padding: 0;
-     border: 0;
-     text-decoration: none;
-     font-family: 'Source Sans Pro', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  outline: none;
 }
 
-body{
-     background: url('img/background.jpg') no-repeat;
-     background-size: cover;
-     overflow: hidden;
+body {
+  /* background: url('img/background.jpg') no-repeat; */
+  /* background-size: cover; */
+  /* background: #f0f0f0; */
+  background: linear-gradient(to left top, #957deb, #7eb3e4, #8cbdeb, #8497ec, #bee7f3);
+  color: #222222;
+  height: 100vh;
+  padding-top: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-button{
-     cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-li, ul {
-     list-style: none;
+li,
+ul {
+  list-style: none;
 }
 
-a{
-     color: #ffffff;
+a {
+  color: #222222;
 }
 
 /*=======================================================
      Header section 
  =======================================================*/
 
-
-
 /*=======================================================
      Modal section 
  =======================================================*/
-.side-modal{
-     position: absolute;
-     top: 0;
-     right: 0;
-     background: #ffffff;
-     padding: 20px;
-     height: 100vh;
-     width: 600px;
-     box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
-     box-sizing: border-box;
-     transition: ease-in-out 0.5s;
+.side-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #222222;
+  padding: 20px;
+  height: 100vh;
+  width: 600px;
+  box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  transition: ease-in-out 0.5s;
 }
 
-.side-modal-out{
-     right: -100%;
+.side-modal-out {
+  right: -100%;
 }
 
-.sm-header{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+.sm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.sm-header button{
-     background-color: transparent;
-     font-size: 24px;
-     font-weight: 600;
-     cursor: pointer;
-     padding: 5px;
+.sm-header button {
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px;
 }
-
 
 /*=======================================================
      Main section 
  =======================================================*/
 
-.main-wrapper{
-     width: 1200px;
-     margin: 0px auto;
-     box-sizing: border-box;
-     display: flex;
-     align-items: center;
+.main-wrapper {
+  width: 1200px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  display: flex;
+  /* align-items: center; */
 }
 
 .main-wrapper > div {
-     display: flex;
-     flex-direction: column;
-     box-sizing: border-box;
-     padding: 30px;
-     width: 50%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 50%;
 }
 
-.greet{
-     color: #ffffff;
-     text-align: center;
-     margin-top: 100px;
-     margin-bottom: 100px;
+.greet {
+  color: #222222;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .search-bar {
-     display: block;
-     width: 50%;
-     padding: 15px 40px;
-     border-radius: 50px;
-     margin: 50px auto 10px;
-     font-size: 18px;
-     box-sizing: border-box;
-     box-shadow: 0 0  15px rgba(0, 0, 0, 0.8);
+  display: block;
+  width: 90%;
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin: 0px auto 50px;
+  font-size: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /*=======================================================
      Left- main section 
  =======================================================*/
 
-.main-l{
-     align-items: center;
+.main-l {
+  align-items: center;
 }
 
-.main-l h1{
-     font-size: 90px;
-     color: #ffffff;
-     text-align: center;
-     font-family: 'Lato';
+.main-l h1 {
+  font-size: 90px;
+  color: #222222;
+  text-align: center;
+  font-family: "Lato";
 }
 
-.main-l p{
-     color: #ffffff;
-     margin-top: 30px;
-     text-align: center;
-     font-size: 24px;
+.main-l p {
+  color: #222222;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 24px;
 }
 
-#date{
-     color: #ffffff;
-     font-size: 24px;
-     margin-bottom: 20px;
+#date {
+  color: #222222;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 /*=======================================================
      Right- main section 
 =======================================================*/
 
-.main-r > h1{
-     font-size: 50px;
-     margin-bottom: 30px;
-     color: #ffffff;
-     text-align: center;
+.main-r > h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #222222;
+  text-align: center;
 }
 
-.tabs-sec{
-     background-color: #ffffff23;
-     min-height: 200px;
-     padding: 15px;
-     border-radius: 20px;
+.tabs-sec {
+  background-color: #22222211;
+  min-height: 200px;
+  padding: 20px 15px;
+  border-radius: 20px;
 }
 
-.sec-input-cont{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     margin-bottom: 20px;
+.sec-input-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .sec-input-cont > input {
-     padding: 10px 20px;
-     font-size: 18px;
-     width: 100%;
-     border-radius: 20px 0 0 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .sec-input-cont > button {
-     background: #3498db;
-     color: #ffffff;
-     padding: 10px 20px;
-     font-size: 18px;
-     border-radius: 0 20px 20px 0px;
+  background: #3498db;
+  color: #ffffff;
+  padding: 6.5px 20px;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 0 50px 50px 0px;
+  box-shadow: 0 0 15px rgba(53, 78, 221, 0.3);
+  box-sizing: border-box;
 }
 
-.sect-unit{
-     color: #ffffff;
-     display: flex;
-     align-items: center;
-     font-size: 20px;
-     padding: 10px 0;
-     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+.sect-unit {
+  color: #222222;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sect-unit-text {
+  overflow: hidden;
+  height: 30px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sect-unit-butts {
+  display: flex;
+  margin-left: auto;
 }
 
 .sect-unit span {
-     background: rgba(255, 255, 255, 0.9);
-     margin: 0 5px;
-     padding: 7px;
-     border-radius: 20px;
-     cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0 5px;
+  padding: 7px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-in-out;
 }
 
 .sect-unit span:hover {
-     background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.sect-unit span img{
-     display: block;
-     width: 15px;
+.sect-unit span img {
+  display: block;
+  width: 15px;
 }
 
-.sect-cont-more-btn{
-     display: block;
-     margin: 10px auto 0;
-     padding: 10px 20px;
-     border-radius: 50px;
+.sect-cont-more-btn {
+  display: block;
+  margin: 10px auto 0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
