@@ -11,11 +11,11 @@
 }
 
 body {
-  /* background: url('img/background.jpg') no-repeat; */
+  /* background: url("img/bg.jpg") no-repeat; */
   /* background-size: cover; */
-  /* background: #f0f0f0; */
-  background: linear-gradient(to left top, #957deb, #7eb3e4, #8cbdeb, #8497ec, #bee7f3);
-  color: #222222;
+  background: #aed6f1;
+  /* background: linear-gradient(to left top, #aed6f1, #9acced, #aed6f1, #9acced, #c2e0f4); */
+  color: #0a1e2c;
   height: 100vh;
   padding-top: 50px;
   box-sizing: border-box;
@@ -83,77 +83,148 @@ a {
   margin: 0px auto;
   box-sizing: border-box;
   display: flex;
-  /* align-items: center; */
 }
 
 .main-wrapper > div {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 30px;
   width: 50%;
 }
 
 .greet {
-  color: #222222;
   text-align: center;
-  margin-bottom: 20px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*=======================================================
+  Left- main section 
+ =======================================================*/
+
+.main-l {
+  color: #0a1e2c;
+  align-items: center;
+  padding: 0 50px 0 0;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-container{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto 50px;
 }
 
 .search-bar {
   display: block;
-  width: 90%;
-  padding: 15px 30px;
+  width: 100%;
+  height: 50px;
+  padding: 0px 50px 0 20px;
   border-radius: 50px;
-  margin: 0px auto 50px;
   font-size: 18px;
   box-sizing: border-box;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/*=======================================================
-     Left- main section 
- =======================================================*/
-
-.main-l {
-  align-items: center;
+.search-bar-but{
+  background: url("/img/google.png") no-repeat;
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  margin-left: -40px;
+  margin-top: 12.5px;
 }
 
+
 .main-l h1 {
-  font-size: 90px;
-  color: #222222;
+  font-size: 70px;
   text-align: center;
   font-family: "Lato";
 }
 
 .main-l p {
-  color: #222222;
   margin-top: 30px;
   text-align: center;
   font-size: 24px;
 }
 
 #date {
-  color: #222222;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 /*=======================================================
-     Right- main section 
+  Right- main section 
 =======================================================*/
 
-.main-r > h1 {
-  font-size: 50px;
-  margin-bottom: 30px;
-  color: #222222;
-  text-align: center;
+.main-r{
+  padding: 0 0 0 50px;
+}
+
+/*=======================================================
+  Tabs buttons
+ =======================================================*/
+
+.tabs-buts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tabs-but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d6eaf8;
+  letter-spacing: 1px;
+  width: 33%;
+  height: 50px;
+  margin: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-but:first-child {
+  border-radius: 50px 0 0 50px;
+}
+
+.tabs-but:last-child {
+  border-radius: 0 50px 50px 0;
+}
+
+.tabs-buts .active {
+  font-weight: 600;
+  background: #f7fbff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-badge {
+  background: #fdedec;
+  color: #e74c3c;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+/*=======================================================
+  Individual tab section 
+ =======================================================*/
+
+.all-tabs-section .active {
+  display: block;
 }
 
 .tabs-sec {
-  background-color: #22222211;
-  min-height: 200px;
-  padding: 20px 15px;
+  display: none;
+  background-color: #d6eaf8;
+  height: 300px;
+  padding: 15px 15px;
   border-radius: 20px;
 }
 
@@ -165,22 +236,25 @@ a {
 }
 
 .sec-input-cont > input {
-  padding: 10px 20px;
   font-size: 18px;
   width: 100%;
+  height: 40px;
+  padding: 0 20px;
   border-radius: 50px 0 0 50px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
 .sec-input-cont > button {
   background: #3498db;
   color: #ffffff;
-  padding: 6.5px 20px;
+  height: 40px;
   font-size: 24px;
   font-weight: 600;
-  border-radius: 0 50px 50px 0px;
-  box-shadow: 0 0 15px rgba(53, 78, 221, 0.3);
+  padding: 6.5px 13px;
+  margin-left: -20px;
+  border-radius: 50px;
+  box-shadow: 0 3px 15px rgba(53, 78, 221, 0.3);
   box-sizing: border-box;
 }
 
@@ -193,36 +267,30 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.sect-unit input {
+  margin-right: 10px;
+}
+
 .sect-unit-text {
   overflow: hidden;
-  height: 30px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.sect-unit-butts {
+.sect-unit-buts {
   display: flex;
   margin-left: auto;
 }
 
-.sect-unit span {
-  background: rgba(255, 255, 255, 0.9);
-  margin: 0 5px;
-  padding: 7px;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  transition: 0.2s ease-in-out;
+.sect-unit-buts button {
+  background-size: cover;
+  margin-left: 5px;
+  height: 20px;
+  width: 20px;
 }
 
-.sect-unit span:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.sect-unit span img {
-  display: block;
-  width: 15px;
+.sect-unit-buts-del {
+  background: url("/img/rubbish-bin.svg") no-repeat;
 }
 
 .sect-cont-more-btn {
@@ -231,4 +299,18 @@ a {
   padding: 10px 20px;
   border-radius: 50px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/*=======================================================
+     Footer 
+ =======================================================*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 10px 20px;
+}
+
+footer a {
+  color: #3498db;
 }
