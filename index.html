@@ -20,47 +20,93 @@
 
      <main>
           <h1 class="greet">Ụtụtụ ọma, Ifedili</h1>
+
+          <!-----------------------------------------------
+               Main container
+          --------------------------------------------- -->
           <div class="main-wrapper">
+               <!-----------------------------------------------
+                    Left Section
+               --------------------------------------------- -->
                <div class="main-l">
-                    <input class="search-bar" type="text" placeholder="Search something..">
+                    <div class="search-bar-container">
+                         <input id="google-search" class="search-bar" type="text" placeholder="Search with google" autofocus>
+                         <button class="search-bar-but"></button>
+                    </div>
                     <div id="date"></div>
                     <h1 id="time">00:00:00</h1>
                     <p id="elekere"></p>
                </div>
+
+               <!-----------------------------------------------
+                    Left Section
+               --------------------------------------------- -->
                <div class="main-r">
-                    <div>Ndetu</div>
-
-                    <section class="tabs-sec">
-                         <div class="sec-input-cont">
-                              <input id="note-text" type="text" placeholder="Dee ihe...">
-                              <button onclick="addNote()">+</button>
+                    <div class="tabs-buts">
+                         <div id="notes-but" class="tabs-but active">
+                              Ndetu
                          </div>
-                         <ul id="notes"></ul>
-                         <button class="sect-cont-more-btn">See more</button>
-                    </section>
-
-                    <section class="tabs-sec">
-                         <div class="sec-input-cont">
-                              <input id="note-text" type="text" placeholder="Todo...">
-                              <button onclick="addNote()">+</button>
+                         <div id="todos-but" class="tabs-but">
+                              To-do
+                              <span class="tabs-badge">4</span>
+                         </div class="tabs-but">
+                         <div id="events-but" class="tabs-but">
+                              Events
+                              <span class="tabs-badge">14</span>
                          </div>
-                         <ul id="todo">
-                              <li class="sect-unit">
-                                   <input type="checkbox" name="" id="">
-                                   <div class="sect-unit-text"> coolk </div>
-                                   <div class="sect-unit-butts">
-                                        <span><img src="./img/pencil-edit-button.svg" alt=""></span>
-                                        <span onclick="deleteNote('${notes[i].id}')"><img src="./img/rubbish-bin.svg" alt=""></span>
-                                   </div>
-                              </li>
-                         </ul>
-                         <button class="sect-cont-more-btn">See more</button>
-                    </section>
+                    </div>
+
+
+                    <div class="all-tabs-section">
+                         <section id="notes-sect" class="tabs-sec active">
+                              <div class="sec-input-cont">
+                                   <input id="note-text" type="text" placeholder="Dee ihe...">
+                                   <button onclick="addNote()">+</button>
+                              </div>
+                              <ul id="notes"></ul>
+                              <!-- <button class="sect-cont-more-btn">See more</button> -->
+                         </section>
+
+                         <section id="todos-sect" class="tabs-sec">
+                              <div class="sec-input-cont">
+                                   <input id="todo-text" type="text" placeholder="Todo...">
+                                   <button onclick="addNote()">+</button>
+                              </div>
+                              <ul id="todos">
+                                   <li class="sect-unit">
+                                        <input type="checkbox" name="" id="">
+                                        <div class="sect-unit-text"> coolk </div>
+                                        <div class="sect-unit-buts">
+                                             <span><img src="./img/pencil-edit-button.svg" alt=""></span>
+                                             <span onclick="deleteNote('${notes[i].id}')"><img
+                                                       src="./img/rubbish-bin.svg" alt=""></span>
+                                        </div>
+                                   </li>
+                              </ul>
+                         </section>
+
+                         <section id="events-sect" class="tabs-sec">
+                              <div class="sec-input-cont">
+                                   <input id="event-text" type="text" placeholder="Dee ihe...">
+                                   <button onclick="addNote()">+</button>
+                              </div>
+                              <ul id="notes"></ul>
+                              <!-- <button class="sect-cont-more-btn">See more</button> -->
+                         </section>
+                    </div>
+
                </div>
           </div>
      </main>
 
-     <script src="js/Chart.bundle.min.js"></script>
+     <!-----------------------------------------------
+          Footer
+     -------------------------------------------- -->
+     <footer>
+          Created by <a href="ifedili.com">Ifedili</a>
+     </footer>
+
+     <!-- <script src="js/Chart.bundle.min.js"></script> -->
      <script src="./js/main.js"></script>
 </body>
 
