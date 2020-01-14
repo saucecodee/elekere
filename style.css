@@ -14,7 +14,7 @@ body {
   /* background: url("img/bg.jpg") no-repeat; */
   /* background-size: cover; */
   background: #aed6f1;
-  /* background: linear-gradient(to left top, #aed6f1, #9acced, #aed6f1, #9acced, #c2e0f4); */
+  background-image: linear-gradient(to right bottom, #9acced, #9fceee, #a4d1ef, #a9d3f0, #aed6f1);
   color: #0a1e2c;
   height: 100vh;
   padding-top: 50px;
@@ -112,7 +112,7 @@ a {
 
 .search-bar-container{
   display: flex;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   margin: 0px auto 50px;
 }
@@ -178,9 +178,10 @@ a {
   align-items: center;
   justify-content: center;
   background: #d6eaf8;
+  font-size: 15px;
   letter-spacing: 1px;
   width: 33%;
-  height: 50px;
+  height: 30px;
   margin: 0;
   cursor: pointer;
   box-sizing: border-box;
@@ -202,13 +203,16 @@ a {
 }
 
 .tabs-badge {
-  background: #fdedec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #fdedec; */
   color: #e74c3c;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 1px;
+  height: 13px;
+  width: 13px;
   margin-left: 10px;
-  padding: 4px;
   border-radius: 20px;
 }
 
@@ -241,30 +245,32 @@ a {
   height: 40px;
   padding: 0 20px;
   border-radius: 50px 0 0 50px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .sec-input-cont > button {
   background: #3498db;
+  background: #ffffff;
   color: #ffffff;
+  color: #3498db;
   height: 40px;
-  font-size: 24px;
+  width: 50px;
+  font-size: 30px;
   font-weight: 600;
-  padding: 6.5px 13px;
-  margin-left: -20px;
-  border-radius: 50px;
+  /* margin-left: -20px; */
+  border-radius:  0 50px 50px 0;
   box-shadow: 0 3px 15px rgba(53, 78, 221, 0.3);
   box-sizing: border-box;
 }
 
 .sect-unit {
-  color: #222222;
   display: flex;
   align-items: center;
   font-size: 15px;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-bottom: 1px solid #aed6f1;
 }
 
 .sect-unit input {
