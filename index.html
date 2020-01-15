@@ -11,23 +11,44 @@
 
 <body>
 
-     <!-----------------------------------------------
+     <!----------------------------------------------
           Modals
      -------------------------------------------- -->
+
+     <!-- Settings modal -->
      <div class="modal">
           <div class="modal-container">
                <div class="modal-header">
-                    <h2>Notes</h2>
+                    <h2>Settings</h2>
                     <button>X</button>
                </div>
                <form>
-                    <label for="">Enter text</label>
-                    <input type="text">
+                    <label for="">Name</label>
+                    <input type="text" placeholder="Your display name">
 
                     <label for="">Enter something else</label>
                     <input type="text">
 
                     <div class="modal-footer">
+                         <button>Save</button>
+                    </div>
+               </form>
+          </div>
+     </div>
+
+     <!-- Note modal -->
+     <div class="modal">
+          <div class="modal-container">
+               <div class="modal-header">
+                    <h2>Ndetu</h2>
+                    <button>X</button>
+               </div>
+               <form>
+                    <label for="">Text</label>
+                    <textarea id="" rows="7" placeholder="Write your note here"></textarea>
+
+                    <div class="modal-footer">
+                         <button>Add</button>
                          <button>Edit</button>
                          <button>Delete</button>
                     </div>
@@ -35,15 +56,63 @@
           </div>
      </div>
 
-     <!-----------------------------------------------
+     <!-- Todo modal -->
+     <div class="modal">
+          <div class="modal-container">
+               <div class="modal-header">
+                    <h2>Todo</h2>
+                    <button>X</button>
+               </div>
+               <form>
+                    <label for="">Text</label>
+                    <textarea id="" rows="7" placeholder="Write your todo here"></textarea>
+
+                    <div class="modal-footer">
+                         <button>Check</button>
+                         <button>Uncheck</button>
+                         <button>Add</button>
+                         <button>Edit</button>
+                         <button>Delete</button>
+                    </div>
+               </form>
+          </div>
+     </div>
+
+     <!-- Event modal -->
+     <div class="modal">
+          <div class="modal-container">
+               <div class="modal-header">
+                    <h2>Events</h2>
+                    <button>X</button>
+               </div>
+               <form>
+                    <label for="">Title</label>
+                    <input type="text" id="" placeholder="Write your title here">
+
+                    <label for="">Date</label>
+                    <input type="date" id="" >
+
+                    <label for="">Time</label>
+                    <input type="time" id="" >
+
+                    <div class="modal-footer">
+                         <button>Add</button>
+                         <button>Edit</button>
+                         <button>Delete</button>
+                    </div>
+               </form>
+          </div>
+     </div>
+
+     <!----------------------------------------------
           Main section
      -------------------------------------------- -->
+
      <main>
+          <!-- Greeting -->
           <h1 class="greet"><span id="greeting-period"></span> ọma, Ifedili</h1>
 
-          <!-----------------------------------------------
-               Main container
-          --------------------------------------------- -->
+          <!-- Main container -->
           <div class="main-wrapper">
                <!-----------------------------------------------
                     Left Section
@@ -60,9 +129,11 @@
                </div>
 
                <!-----------------------------------------------
-                    Left Section
+                    Right Section
                --------------------------------------------- -->
                <div class="main-r">
+
+                    <!-- All Tabs -->
                     <div class="tabs-buts">
                          <div id="notes-but" class="tabs-but active">
                               Ndetu
@@ -77,8 +148,8 @@
                          </div>
                     </div>
 
-
                     <div class="all-tabs-section">
+                         <!-- Notes section -->
                          <section id="notes-sect" class="tabs-sec active">
                               <div class="sec-input-cont">
                                    <input id="note-text" type="text" placeholder="Chota ihe...">
@@ -86,9 +157,9 @@
                                    <button>Add</button>
                               </div>
                               <ul id="notes"></ul>
-                              <!-- <button class="sect-cont-more-btn">See more</button> -->
                          </section>
 
+                         <!-- Todos section -->
                          <section id="todos-sect" class="tabs-sec">
                               <div class="sec-input-cont">
                                    <input id="todo-text" type="text" placeholder="Todo...">
@@ -105,13 +176,13 @@
                               </ul>
                          </section>
 
+                         <!-- Events section -->
                          <section id="events-sect" class="tabs-sec">
                               <div class="sec-input-cont">
                                    <input id="event-text" type="text" placeholder="Dee ihe...">
                                    <button onclick="addNote()">+</button>
                               </div>
-                              <ul id="notes"></ul>
-                              <!-- <button class="sect-cont-more-btn">See more</button> -->
+                              <ul id="events"></ul>
                          </section>
                     </div>
 
@@ -119,15 +190,19 @@
           </div>
      </main>
 
-     <!-----------------------------------------------
+     <!----------------------------------------------
           Footer
      -------------------------------------------- -->
+
      <footer>
-          Created by <a href="ifedili.com">Ifedili</a>
+          <span>Created by <a href="ifedili.com">Ifedili</a></span>
+          <div>
+               <p>Setting</p>
+          </div>
      </footer>
 
 
-     <!-----------------------------------------------
+     <!----------------------------------------------
           Scripts
      -------------------------------------------- -->
      <script src="./js/global.js"></script>

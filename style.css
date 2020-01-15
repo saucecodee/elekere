@@ -17,7 +17,7 @@ body {
   padding-top: 50px;
   box-sizing: border-box;
   overflow: hidden;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 button {
@@ -43,7 +43,7 @@ a {
   position: absolute;
   top: 0;
   display: flex;
-  display: none;
+  /* display: none; */
   justify-content: center;
   background: rgba(0, 0, 0, 0.7);
   width: 100vw;
@@ -52,7 +52,7 @@ a {
   z-index: 20;
 }
 
-.modal-container{
+.modal-container {
   background: #ffffff;
   height: min-content;
   width: 500px;
@@ -63,52 +63,59 @@ a {
   box-sizing: border-box;
 }
 
-.modal-header{
+.modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
 }
 
-.modal-header h2{
+.modal-header h2 {
   font-family: "lato";
 }
 
-.modal-header button{
+.modal-header button {
   background: #ffffff;
   color: #e74c3c;
   font-size: 18px;
   font-weight: 800;
 }
 
-.modal-container form{
+.modal-container form {
   display: flex;
   flex-direction: column;
 }
 
-.modal-container label{
-  font-size: 14px;
+.modal-container label {
+  color: #3498db;
+  font-size: 12px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-.modal-container input{
-  font-size: 18px;
-  height: 40px;
+.modal-container input {
+  height: 35px;
+  font-size: 15px;
   width: 100%;
-  border: 1px solid #e2e2e2;
-  border-radius: 5px;
+  border-bottom: 1px solid #b8b8b8;
   margin-bottom: 20px;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
-.modal-footer{
+.modal-container textarea {
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #b8b8b8;
+}
+
+.modal-footer {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
 
-.modal-footer button{
+.modal-footer button {
   color: #ffffff;
   background: #3498db;
   font-family: "lato";
@@ -116,20 +123,18 @@ a {
   height: 35px;
   border-radius: 50px;
   margin-right: 10px;
-  padding: 0 20px;
+  padding: 0 30px;
 }
-
-
 
 /*=======================================================
      Main section 
  =======================================================*/
 
 .main-wrapper {
+  display: flex;
   width: 1200px;
   margin: 0px auto;
   box-sizing: border-box;
-  display: flex;
 }
 
 .main-wrapper > div {
@@ -157,7 +162,7 @@ a {
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar-container{
+.search-bar-container {
   display: flex;
   width: 90%;
   box-sizing: border-box;
@@ -175,7 +180,7 @@ a {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar-but{
+.search-bar-but {
   background: url("/img/google.png") no-repeat;
   background-size: cover;
   height: 25px;
@@ -183,7 +188,6 @@ a {
   margin-left: -40px;
   margin-top: 12.5px;
 }
-
 
 .main-l h1 {
   font-size: 70px;
@@ -206,7 +210,7 @@ a {
   Right- main section 
 =======================================================*/
 
-.main-r{
+.main-r {
   padding: 0 0 0 50px;
 }
 
@@ -304,7 +308,7 @@ a {
   width: 50px;
   font-size: 30px;
   font-weight: 600;
-  border-radius:  0 50px 50px 0;
+  border-radius: 0 50px 50px 0;
   box-sizing: border-box;
   box-shadow: 0 3px 15px rgba(53, 78, 221, 0.3);
 }
@@ -356,9 +360,14 @@ a {
  =======================================================*/
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   bottom: 0;
-  padding: 10px 20px;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 footer a {
