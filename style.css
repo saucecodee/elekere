@@ -43,7 +43,7 @@ a {
   position: absolute;
   top: 0;
   display: flex;
-  /* display: none; */
+  display: none;
   justify-content: center;
   background: rgba(0, 0, 0, 0.7);
   width: 100vw;
@@ -232,7 +232,7 @@ a {
   font-size: 15px;
   letter-spacing: 1px;
   width: 33%;
-  height: 30px;
+  height: 35px;
   margin: 0;
   cursor: pointer;
   box-sizing: border-box;
@@ -257,7 +257,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: #fdedec; */
   color: #e74c3c;
   font-size: 13px;
   font-weight: 600;
@@ -278,7 +277,6 @@ a {
 .tabs-sec {
   display: none;
   background-color: #d6eaf8;
-  height: 300px;
   padding: 15px 15px;
   border-radius: 20px;
 }
@@ -295,22 +293,31 @@ a {
   width: 100%;
   height: 40px;
   padding: 0 20px;
-  border-radius: 50px 0 0 50px;
-  box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  z-index: 0;
+}
+
+.sec-input-cont > span{
+  color: #b8b8b8;
+  margin-left: -30px;
 }
 
 .sec-input-cont > button {
-  color: #3498db;
-  background: #ffffff;
+  color: #ffffff;
+  background: #3498db;
   height: 40px;
-  width: 50px;
-  font-size: 30px;
-  font-weight: 600;
-  border-radius: 0 50px 50px 0;
+  width: 90px;
+  font-size: 15px;
+  border-radius: 50px;
+  margin-left: 35px;
   box-sizing: border-box;
   box-shadow: 0 3px 15px rgba(53, 78, 221, 0.3);
+}
+
+.tabs-sec ul {
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 .sect-unit {
