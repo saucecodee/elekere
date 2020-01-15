@@ -11,9 +11,6 @@
 }
 
 body {
-  /* background: url("img/bg.jpg") no-repeat; */
-  /* background-size: cover; */
-  background: #aed6f1;
   background-image: linear-gradient(to right bottom, #9acced, #9fceee, #a4d1ef, #a9d3f0, #aed6f1);
   color: #0a1e2c;
   height: 100vh;
@@ -24,6 +21,9 @@ body {
 }
 
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -37,42 +37,89 @@ a {
 }
 
 /*=======================================================
-     Header section 
- =======================================================*/
-
-/*=======================================================
      Modal section 
  =======================================================*/
-.side-modal {
+.modal {
   position: absolute;
   top: 0;
-  right: 0;
-  background: #222222;
-  padding: 20px;
-  height: 100vh;
-  width: 600px;
-  box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  transition: ease-in-out 0.5s;
-}
-
-.side-modal-out {
-  right: -100%;
-}
-
-.sm-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  transition: ease-in-out 0.5s;
+  z-index: 20;
 }
 
-.sm-header button {
-  background-color: transparent;
-  font-size: 24px;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 5px;
+.modal-container{
+  background: #ffffff;
+  height: min-content;
+  width: 500px;
+  border-radius: 15px;
+  margin-top: 100px;
+  padding: 30px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
 }
+
+.modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.modal-header h2{
+  font-family: "lato";
+}
+
+.modal-header button{
+  background: #ffffff;
+  color: #e74c3c;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.modal-container form{
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-container label{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal-container input{
+  font-size: 18px;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.modal-footer{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.modal-footer button{
+  color: #ffffff;
+  background: #3498db;
+  font-family: "lato";
+  font-size: 14px;
+  height: 35px;
+  border-radius: 50px;
+  margin-right: 10px;
+  padding: 0 20px;
+}
+
+
 
 /*=======================================================
      Main section 
@@ -247,30 +294,27 @@ a {
   border-radius: 50px 0 0 50px;
   box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 0;
 }
 
 .sec-input-cont > button {
-  background: #3498db;
-  background: #ffffff;
-  color: #ffffff;
   color: #3498db;
+  background: #ffffff;
   height: 40px;
   width: 50px;
   font-size: 30px;
   font-weight: 600;
-  /* margin-left: -20px; */
   border-radius:  0 50px 50px 0;
-  box-shadow: 0 3px 15px rgba(53, 78, 221, 0.3);
   box-sizing: border-box;
+  box-shadow: 0 3px 15px rgba(53, 78, 221, 0.3);
 }
 
 .sect-unit {
   display: flex;
   align-items: center;
   font-size: 15px;
-  padding: 10px;
   border-bottom: 1px solid #aed6f1;
+  padding: 10px;
 }
 
 .sect-unit input {
