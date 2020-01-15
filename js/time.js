@@ -6,13 +6,18 @@ function showTime() {
      let verb = getverbTense().verb;
      let hour = getverbTense().hour;
      let period = getPeriod();
-     $('#time').innerHTML = new Date().toLocaleTimeString()
-     $('#date').innerHTML = new Date().toDateString()
-     $('#elekere').innerHTML = `O ${tense} nkeji ${convertNumToWords(minute)} ${verb} elekere ${convertNumToWords(hour)} nke ${period}`
+     $("#time").innerHTML = new Date().toLocaleTimeString()
+     $("#date").innerHTML = new Date().toDateString()
+     $("#elekere").innerHTML = `O ${tense} nkeji ${convertNumToWords(minute)} ${verb} elekere ${convertNumToWords(hour)} nke ${period}`
+}
+
+function showGreeting() {
+     let period = getPeriod();
+     $("#greeting-period").innerHTML = period
 }
 
 function getTime() {
-     return new Date().toTimeString().split(' ')[0].split(':')
+     return new Date().toTimeString().split(" ")[0].split(":")
 }
 
 function getPeriod() {
@@ -57,11 +62,16 @@ function convertNumToWords(num) {
      if (numString.length < 2) {
           return unitWords[num]
      } else {
-          let tense = numString.split('')
-          return `iri${num < 20 ? '' : ' ' + unitWords[tense[0]]} ${tense[1] == 0 ? '' : 'na'} ${unitWords[tense[1]]}`
+          let tense = numString.split("")
+          return `iri${num < 20 ? "" : " " + unitWords[tense[0]]} ${tense[1] == 0 ? "" : "na"} ${unitWords[tense[1]]}`
      }
 }
 
 // Show time and update every second
 showTime()
-setInterval(() => showTime(), 1000);
+showGreeting()
+
+setInterval(() => {
+     showTime()
+     showGreeting()
+}, 1000);

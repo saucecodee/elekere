@@ -10,6 +10,10 @@
 </head>
 
 <body>
+
+     <!-----------------------------------------------
+          Modals
+     -------------------------------------------- -->
      <div class="modal">
           <div class="modal-container">
                <div class="modal-header">
@@ -31,9 +35,11 @@
           </div>
      </div>
 
-
+     <!-----------------------------------------------
+          Main section
+     -------------------------------------------- -->
      <main>
-          <h1 class="greet">Ụtụtụ ọma, Ifedili</h1>
+          <h1 class="greet"><span id="greeting-period"></span> ọma, Ifedili</h1>
 
           <!-----------------------------------------------
                Main container
@@ -44,7 +50,8 @@
                --------------------------------------------- -->
                <div class="main-l">
                     <div class="search-bar-container">
-                         <input id="google-search" class="search-bar" type="text" placeholder="Search with google" autofocus>
+                         <input id="google-search" class="search-bar" type="text" placeholder="Search with google"
+                              autofocus>
                          <button class="search-bar-but"></button>
                     </div>
                     <div id="date"></div>
@@ -74,8 +81,9 @@
                     <div class="all-tabs-section">
                          <section id="notes-sect" class="tabs-sec active">
                               <div class="sec-input-cont">
-                                   <input id="note-text" type="text" placeholder="Dee ihe...">
-                                   <button onclick="addNote()">+</button>
+                                   <input id="note-text" type="text" placeholder="Chota ihe...">
+                                   <button>+</button>
+                                   <button>Add</button>
                               </div>
                               <ul id="notes"></ul>
                               <!-- <button class="sect-cont-more-btn">See more</button> -->
@@ -88,12 +96,10 @@
                               </div>
                               <ul id="todos">
                                    <li class="sect-unit">
-                                        <input type="checkbox" name="" id="">
-                                        <div class="sect-unit-text"> coolk </div>
+                                        <input type="checkbox" name="" id="" checked>
+                                        <p class="sect-unit-text"> coolk </p>
                                         <div class="sect-unit-buts">
-                                             <span><img src="./img/pencil-edit-button.svg" alt=""></span>
-                                             <span onclick="deleteNote('${notes[i].id}')"><img
-                                                       src="./img/rubbish-bin.svg" alt=""></span>
+                                             <button class="sect-unit-buts-del"></button>
                                         </div>
                                    </li>
                               </ul>
