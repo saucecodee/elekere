@@ -1,15 +1,19 @@
-# Scheduler
-## Organize all you day to day activity , tasks, and goals as projects with Scheduler.
+# ELEKERE
 
-Scheduler is a chrome extension used to organize your projects and get tasks completed with scheduled time. 
- <p align='center'>
+## Take notes, manage events and set your goals with Elekere.
+
+Elekere is a chrome extension built on the Igbo culture with utility tools like notes, todo and event management.
+
+<p align='center'>
   <img src='https://res.cloudinary.com/rippletvng/image/upload/v1576700855/Screenshot_66_xklhwj.png' width='600' alt='scheduler'>
-  </p>
+</p>
 
 ## How to use
-- **Create a new Project**
 
-Click on the new project button to create a new project. Each project can have from 1 to as many task related to the particular project
+- **Create a new note (Ndetu)**
+
+Click on the Ndetu tab then enter your notes and click on the  + button to add a new note.
+
 <p align='center'>
   <img src='https://res.cloudinary.com/rippletvng/image/upload/v1576700919/Screenshot_60_wciyiw.png' width='600' alt='image'>
  </p>
@@ -24,5 +28,6 @@ Click on the new project button to create a new project. Each project can have f
   <img src='https://res.cloudinary.com/rippletvng/image/upload/v1576700877/Screenshot_64_uvrhxs.png' width='600' alt='image'>
  </p>
 
-## NB
-Please make sure your chrome browser is updated to get the best out the extension. 
+## Better experience
+
+For better user experience please use the latest chrome browser.
