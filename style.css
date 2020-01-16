@@ -308,7 +308,8 @@ a {
   background: #3498db;
   height: 40px;
   width: 90px;
-  font-size: 15px;
+  font-size: 25px;
+  font-weight: 600;
   border-radius: 50px;
   margin-left: 35px;
   box-sizing: border-box;
