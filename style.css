@@ -36,6 +36,27 @@ a {
   color: #222222;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+/* 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 /*=======================================================
      Modal section 
  =======================================================*/
@@ -158,7 +179,7 @@ a {
 .main-l {
   color: #0a1e2c;
   align-items: center;
-  padding: 0 50px 0 0;
+  padding: 0 100px 0 0;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -189,15 +210,20 @@ a {
   margin-top: 12.5px;
 }
 
-.main-l h1 {
+.time-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.time-container h1 {
   font-size: 70px;
-  text-align: center;
   font-family: "Lato";
 }
 
-.main-l p {
+.time-container p {
   margin-top: 30px;
-  text-align: center;
   font-size: 24px;
 }
 
@@ -210,9 +236,9 @@ a {
   Right- main section 
 =======================================================*/
 
-.main-r {
-  padding: 0 0 0 50px;
-}
+/* .main-r {
+  padding: 0 0 0 20px;
+} */
 
 /*=======================================================
   Tabs buttons
@@ -285,7 +311,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .sec-input-cont > input {
@@ -317,8 +342,10 @@ a {
 }
 
 .tabs-sec ul {
-  max-height: 300px;
+  max-height: calc(100vh - 350px);
+  margin-top: 10px;
   overflow-y: scroll;
+  
 }
 
 .sect-unit {
@@ -380,4 +407,5 @@ footer {
 
 footer a {
   color: #3498db;
+  cursor: pointer;
 }

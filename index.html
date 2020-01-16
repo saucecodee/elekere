@@ -16,18 +16,15 @@
      -------------------------------------------- -->
 
      <!-- Settings modal -->
-     <div class="modal">
+     <div class="modal" id="settings-modal">
           <div class="modal-container">
                <div class="modal-header">
                     <h2>Settings</h2>
-                    <button>X</button>
+                    <button id="close-settings-modal">X</button>
                </div>
                <form>
                     <label for="">Name</label>
                     <input type="text" placeholder="Your display name">
-
-                    <label for="">Enter something else</label>
-                    <input type="text">
 
                     <div class="modal-footer">
                          <button>Save</button>
@@ -37,15 +34,15 @@
      </div>
 
      <!-- Note modal -->
-     <div class="modal">
+     <div class="modal" id="note-modal">
           <div class="modal-container">
                <div class="modal-header">
                     <h2>Ndetu</h2>
-                    <button>X</button>
+                    <button id="close-note-modal">X</button>
                </div>
                <form>
                     <label for="">Text</label>
-                    <textarea id="" rows="7" placeholder="Write your note here"></textarea>
+                    <textarea rows="7" placeholder="Write your note here"></textarea>
 
                     <div class="modal-footer">
                          <button>Add</button>
@@ -57,15 +54,15 @@
      </div>
 
      <!-- Todo modal -->
-     <div class="modal">
+     <div class="modal" id="todo-modal">
           <div class="modal-container">
                <div class="modal-header">
                     <h2>Todo</h2>
-                    <button>X</button>
+                    <button id="close-todo-modal">X</button>
                </div>
                <form>
                     <label for="">Text</label>
-                    <textarea id="" rows="7" placeholder="Write your todo here"></textarea>
+                    <textarea rows="7" placeholder="Write your todo here"></textarea>
 
                     <div class="modal-footer">
                          <button>Check</button>
@@ -79,21 +76,21 @@
      </div>
 
      <!-- Event modal -->
-     <div class="modal">
+     <div class="modal" id="event-modal">
           <div class="modal-container">
                <div class="modal-header">
                     <h2>Events</h2>
-                    <button>X</button>
+                    <button id="close-event-modal">X</button>
                </div>
                <form>
                     <label for="">Title</label>
-                    <input type="text" id="" placeholder="Write your title here">
+                    <input type="text" placeholder="Write your title here">
 
                     <label for="">Date</label>
-                    <input type="date" id="">
+                    <input type="date">
 
                     <label for="">Time</label>
-                    <input type="time" id="">
+                    <input type="time">
 
                     <div class="modal-footer">
                          <button>Add</button>
@@ -118,14 +115,17 @@
                     Left Section
                --------------------------------------------- -->
                <div class="main-l">
-                    <div class="search-bar-container">
+                    <!-- <div class="search-bar-container">
                          <input id="google-search" class="search-bar" type="text" placeholder="Search with google"
                               autofocus>
                          <button class="search-bar-but"></button>
+                    </div> -->
+
+                    <div class="time-container">
+                         <div id="date"></div>
+                         <h1 id="time">00:00:00</h1>
+                         <p id="elekere"></p>
                     </div>
-                    <div id="date"></div>
-                    <h1 id="time">00:00:00</h1>
-                    <p id="elekere"></p>
                </div>
 
                <!-----------------------------------------------
@@ -163,7 +163,7 @@
                          <section id="todos-sect" class="tabs-sec">
                               <div class="sec-input-cont">
                                    <input id="todo-text" type="text" placeholder="Todo...">
-                                   <button onclick="addNote()">+</button>
+                                   <button id="open-todo-modal">+</button>
                               </div>
                               <ul id="todos">
                                    <li class="sect-unit">
@@ -180,7 +180,7 @@
                          <section id="events-sect" class="tabs-sec">
                               <div class="sec-input-cont">
                                    <input id="event-text" type="text" placeholder="Dee ihe...">
-                                   <button onclick="addNote()">+</button>
+                                   <button id="open-event-modal">+</button>
                               </div>
                               <ul id="events"></ul>
                          </section>
@@ -197,7 +197,7 @@
      <footer>
           <span>Created by <a href="ifedili.com">Ifedili</a></span>
           <div>
-               <p>Setting</p>
+               <a id="open-settings-modal">Settings</a>
           </div>
      </footer>
 
