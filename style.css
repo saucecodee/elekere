@@ -72,7 +72,7 @@ a {
   height: 100vh;
   transition: ease-in-out 0.5s;
   z-index: 20;
-  animation: modal 0.5s ease-out ;
+  animation: modal 0.3s ease-out ;
 }
 
 @keyframes modal{
