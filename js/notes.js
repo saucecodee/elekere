@@ -1,3 +1,5 @@
+let notes = JSON.parse(localStorage.getItem("notes")) || []
+
 function getNote(id) {
 
 }
@@ -6,9 +8,9 @@ function addNote() {
      let note = $("#note-text").value
      notes.push({ id: new Date().toJSON(), text: note })
 
-     storeNote()
-     showNotes()
      $("#note-text").value = ''
+
+     storeNote()
 }
 
 function editNote(id) {
@@ -20,7 +22,7 @@ function editNote(id) {
 }
 
 function deleteNote(id) {
-     let index = notes.findIndex(n => n.id == id)
+     let index = notes.findIndex((n) => n.id == id)
      notes.splice(index, 1)
 
      storeNote()
@@ -32,7 +34,7 @@ function showNotes() {
 
      for (let i = disNum - 1; i > -1; i--) {
           noteList += `<li class="sect-unit">
-                    <div class="sect-unit-text"> ${notes[i].text} </div>
+                    <p class="sect-unit-text"> ${notes[i].text} </p>
                     <div class="sect-unit-buts">
                          <button id="${notes[i].id}" class="sect-unit-buts-del"></button>
                     </div>
@@ -46,3 +48,6 @@ function storeNote() {
      localStorage.setItem("notes", JSON.stringify(notes))
      showNotes()
 }
+
+//Display notes
+showNotes()

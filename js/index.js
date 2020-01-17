@@ -1,3 +1,15 @@
+
+
+// Search with google
+// $("#google-search").onkeypress = (e) => {
+//      let searchText = $("#google-search").value
+//      if (e.key === "Enter") window.location.replace(`https://www.google.com/search?q=${searchText}&rlz=1C1CHBF_enNG853NG853&oq=iff&aqs=chrome..69i57.723j0j1&sourceid=chrome&ie=UTF-8`)
+// }
+
+// //////////////////////////////////////////////////////
+//      Tabs
+/////////////////////////////////////////////////////////
+
 const tabs = {
      "notes-but": {
           button: "notes-but",
@@ -12,28 +24,6 @@ const tabs = {
           section: "events-sect"
      }
 }
-let notes = JSON.parse(localStorage.getItem("notes")) || []
-
-// //////////////////////////////////////////////////////
-//      Initial calls
-/////////////////////////////////////////////////////////
-
-
-
-//Display notes
-showNotes()
-
-
-
-
-
-// S('#sm-close-btn').addEventListener("click", function () {
-//      S('.side-modal').classList.add("side-modal-out")
-// });
-
-// //////////////////////////////////////////////////////
-//      Event Listners
-/////////////////////////////////////////////////////////
 
 // Swith tabs
 $$(".tabs-but").forEach(e => {
@@ -50,13 +40,6 @@ $$(".tabs-but").forEach(e => {
      }
 })
 
-
-
-// Search with google
-$("#google-search").onkeypress = (e) => {
-     let searchText = $("#google-search").value
-     if (e.key === "Enter") window.location.replace(`https://www.google.com/search?q=${searchText}&rlz=1C1CHBF_enNG853NG853&oq=iff&aqs=chrome..69i57.723j0j1&sourceid=chrome&ie=UTF-8`)
-}
 
 // //////////////////////////////////////////////////////
 //      Notes
@@ -75,8 +58,60 @@ $$(".sect-unit-buts-del").forEach((e) => {
      };
 })
 
+const noteModal = $("#note-modal")
+
+$("#open-note-modal").onclick = (e) => {
+     noteModal.style.display = "flex"
+}
+
+$("#close-note-modal").onclick = (e) => {
+     noteModal.style.display = "none"
+}
 
 
+// //////////////////////////////////////////////////////
+//      Todos
+/////////////////////////////////////////////////////////
+
+const todoModal = $("#todo-modal")
+
+$("#open-todo-modal").onclick = (e) => {
+     todoModal.style.display = "flex"
+}
+
+$("#close-todo-modal").onclick = (e) => {
+     todoModal.style.display = "none"
+}
+
+
+// //////////////////////////////////////////////////////
+//      Events
+/////////////////////////////////////////////////////////
+
+const eventModal = $("#event-modal")
+
+$("#open-event-modal").onclick = (e) => {
+     eventModal.style.display = "flex"
+}
+
+$("#close-event-modal").onclick = (e) => {
+     eventModal.style.display = "none"
+}
+
+
+// //////////////////////////////////////////////////////
+//      Setting
+/////////////////////////////////////////////////////////
+
+const settingsModal = $("#settings-modal")
+
+$("#open-settings-modal").onclick = (e) => {
+     settingsModal.style.display = "flex"
+}
+
+$("#close-settings-modal").onclick = (e) => {
+     settingsModal.style.display = "none"
+}
 
 
 
