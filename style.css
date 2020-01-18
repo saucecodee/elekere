@@ -428,11 +428,18 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100vw;
-  padding: 20px;
+  padding: 20px 50px;
   box-sizing: border-box;
 }
 
 footer a {
   color: #3498db;
   cursor: pointer;
+}
+
+.settings-but{
+  background: url("/img/gear.svg") no-repeat;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
 }
