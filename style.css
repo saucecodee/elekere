@@ -339,15 +339,20 @@ a {
   font-size: 18px;
   width: 100%;
   height: 40px;
-  padding: 0 20px;
+  padding: 0 50px 0 20px;
   border-radius: 50px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
 .sec-input-cont > span {
-  color: #b8b8b8;
-  margin-left: -30px;
+  /* color: rgb(66, 66, 66); */
+  background: url("/img/search.svg") no-repeat;
+  background-size: cover;
+  height: 20px;
+  width: 23px;
+  margin-left: -40px;
+  z-index: 3px;
 }
 
 .sec-input-cont > button {
