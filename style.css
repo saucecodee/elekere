@@ -372,7 +372,6 @@ a {
   max-height: calc(100vh - 350px);
   margin-top: 10px;
   overflow: auto;
-  /* overflow-y: scroll; */
 }
 
 .sect-unit {
@@ -442,4 +441,5 @@ footer a {
   background-size: cover;
   height: 30px;
   width: 30px;
+  cursor: pointer;
 }
