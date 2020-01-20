@@ -13,6 +13,8 @@ function showTime() {
 
 function showGreeting() {
      let period = getPeriod();
+     let first = period[0]
+     period = period.replace(first, first.toUpperCase())
      $("#greeting-period").innerHTML = period
 }
 
@@ -42,6 +44,8 @@ function getverbTense() {
           return { tense: "fọdụrụ", verb: "na-aga", minute: 60 - min, hour: hour + 1 }
      } else if (min == 0) {
           return { tense: "kụọla", verb: " ", minute: " ", hour: hour }
+     } else if (min == 30) {
+          return { tense: "kụọla", verb: " ", minute: "okara", hour: hour }
      } else {
           return "loadin"
      }
