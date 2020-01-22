@@ -1,10 +1,10 @@
 const unitWords = ["", "otu", "abụọ", "atọ", "anọ", "ise", "isii", "asaa", "asatọ", "itoolu"]
 
 function showTime() {
-     let tense = getverbTense().tense;
-     let minute = getverbTense().minute;
-     let verb = getverbTense().verb;
-     let hour = getverbTense().hour;
+     let tense = getTenseVerbMinuteHour().tense;
+     let minute = getTenseVerbMinuteHour().minute;
+     let verb = getTenseVerbMinuteHour().verb;
+     let hour = getTenseVerbMinuteHour().hour;
      let period = getPeriod();
      $("#time").innerHTML = new Date().toLocaleTimeString()
      $("#date").innerHTML = new Date().toDateString()
@@ -34,7 +34,7 @@ function getPeriod() {
      }
 }
 
-function getverbTense() {
+function getTenseVerbMinuteHour() {
      let min = parseInt(getTime()[1])
      let hour = getHour()
 

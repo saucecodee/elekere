@@ -51,12 +51,18 @@ $("#note-text").onkeypress = (e) => {
 };
 
 // Delete note
-$$(".sect-unit-buts-del").forEach((e) => {
-     e.onclick = (e) => {
-          let id = e.target.id
-          deleteNote(id)
-     };
-})
+$("#notes").onclick = (e) => {
+    if(e.target.classList.contains('sect-unit-buts-del')){
+     let id = e.target.id
+     deleteNote(id)
+    }
+}
+// $$(".sect-unit-buts-del").forEach((e) => {
+//      e.onclick = (e) => {
+//           let id = e.target.id
+//           deleteNote(id)
+//      };
+// })
 
 const noteModal = $("#note-modal")
 
