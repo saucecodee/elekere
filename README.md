@@ -1,2 +1,3 @@
 # elekere
-Igbo themed chrome extension
+
+An Igbo themed chrome extension
